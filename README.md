@@ -7,7 +7,6 @@ type of DTO class and on any Path Param or Query Param and as soon as we pass a
 wrong value, that annotation must catch that and should raise an appropriate 
 issue with an appropriate message.
 
-Suppose I added an `@ValidPhoneNumber` annotation on a field then in some 
-class I should first create this annotation using a ValidationFactory and then
-I should be able to pass the appropriate check and generate an apt error message
-with a proper code in case the value passed is incorrect.
+Suppose I added an `@ValidPhoneNumber` annotation on a field then to implement it I
+must be able to pass the correct predicate logic and errorMessage to hanlde that 
+error.
