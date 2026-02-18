@@ -4,6 +4,7 @@ import com.personal.validator.dto.UserDTO;
 import com.personal.validator.dto.UserResponseDTO;
 import com.personal.validator.entity.User;
 import com.personal.validator.repository.UserRepository;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
@@ -38,7 +39,7 @@ public class UserController {
     }
 
     @PostMapping("/insert-user")
-    public ResponseEntity<UserResponseDTO> insertUser(@RequestBody UserDTO userDTO) {
+    public ResponseEntity<UserResponseDTO> insertUser(@Valid @RequestBody UserDTO userDTO) {
         User user = new User();
         user.setName(userDTO.name());
         user.setEmail(userDTO.email());
