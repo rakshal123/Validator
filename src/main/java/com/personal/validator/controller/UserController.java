@@ -49,6 +49,6 @@ public class UserController {
                 .name(user.getName())
                 .email(user.getEmail())
                 .phoneNumber(user.getPhoneNumber())
-                .build(), HttpStatusCode.valueOf(204));
+                .build(), HttpStatusCode.valueOf(201));
     }
 }
